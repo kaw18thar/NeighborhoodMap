@@ -1,0 +1,10 @@
+        .container{
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+        #map{
+      
+          height: 70vh;
+          width: 100%;
+        }

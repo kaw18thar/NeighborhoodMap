@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style src="css/style.css"></style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="libs/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" >
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="sideContent">
+            Locations, click on any location to show its position:
+            <p>
+          Filter locations:
+           <!-- <input id="filter" type="text" data-bind="textInput: filter"/> -->
+            <input id="search" type="text" name="search" placeholder="Search for a location" data-bind="textInput: query" autocomplete="off" />
+            </p>
+          
+            <ul data-bind="foreach: resultedLoc">
+         <li data-bind="text: title, click: showPlace "></li> 
+        </ul>
+            <button data-bind="click: showListings"> show all locations!</button>          
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="http://knockoutjs.com/downloads/knockout-3.4.2.js"></script>
+    <script src="js/mapstyle.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGZCtd--IlLq4Ii3L8H5QzcHb9xF3EMW4&amp;v=3&amp;callback=initMap"></script>
+
+</body>
+
+</html> 
+<!-- data-bind="visible: markersloc().length>0" -->
